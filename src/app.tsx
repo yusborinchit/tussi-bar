@@ -1,29 +1,8 @@
-import { useEffect, useState } from "react";
 import SpotifyIcon from "./components/icons/spotify-icon";
-import { bars } from "./data/bars";
-
-interface Bar {
-  first_bar: string;
-  second_bar: string;
-  song_title: string;
-  url: string;
-}
-
-function getRandomNumber(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function getRandomBar() {
-  const randomIndex = getRandomNumber(0, bars.length - 1);
-  return bars[randomIndex];
-}
+import { useBar } from "./hooks/use-bar";
 
 export default function App() {
-  const [bar, setBar] = useState<Bar>(getRandomBar());
-
-  useEffect(() => {
-    setBar(getRandomBar());
-  }, []);
+  const bar = useBar();
 
   return (
     <main className="grid min-h-screen place-items-center bg-zinc-950 px-4 font-new-amsterdam text-zinc-50">
