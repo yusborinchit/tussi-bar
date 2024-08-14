@@ -5,7 +5,7 @@ export default function App() {
   const bar = useBar();
 
   return (
-    <main className="grid min-h-screen place-items-center bg-zinc-950 px-4 font-new-amsterdam text-zinc-50">
+    <main className="grid min-h-[100dvh] place-items-center bg-zinc-950 px-4 font-new-amsterdam text-zinc-50">
       <section className="flex items-center">
         <h1 className="flex flex-col text-7xl leading-[0.75] opacity-10">
           <span>Tussi</span>
